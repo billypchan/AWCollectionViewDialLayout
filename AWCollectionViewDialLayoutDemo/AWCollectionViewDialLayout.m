@@ -10,6 +10,7 @@
 //
 
 #import "AWCollectionViewDialLayout.h"
+#import "ViewController.h"
 
 @implementation AWCollectionViewDialLayout
 
@@ -97,6 +98,7 @@
     return(theSize);
 }
 
+#define MIN_Y -100
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     double newIndex = (indexPath.item + self.offset);
@@ -109,7 +111,7 @@
     CGAffineTransform translationT;
     CGAffineTransform rotationT = CGAffineTransformMakeRotation(self.AngularSpacing* newIndex *M_PI/180);
     if(indexPath.item == 3){
-        NSLog(@"angle 3 :%f", self.AngularSpacing* newIndex);
+//        NSLog(@"angle 3 :%f", self.AngularSpacing* newIndex);
     }
     
     
@@ -122,12 +124,36 @@
         scaleFactor = fmax(0.4, 1 - fabs( newIndex *0.50));
         deltaX =  self.collectionView.bounds.size.width/2;
         theAttributes.center = CGPointMake(-self.dialRadius + self.xOffset , self.collectionView.bounds.size.height/2 + self.collectionView.contentOffset.y);
-        translationT =CGAffineTransformMakeTranslation(self.dialRadius  + ((1 - scaleFactor) * -30) , 0);
+//      translationT =CGAffineTransformMakeTranslation(self.dialRadius  + ((1 - scaleFactor) * -30) , 0);
+
+      ///0 -> MIN_Y
+      ///100 -> 0
+      float offset = 0;
+      @try {
+        NSDictionary * dict = self.viewController.items[indexPath.item];
+        
+        if([dict[@"geoTrackingEnabled"] boolValue])
+        {
+
+        float relativePosition = [dict[@"relativePosition"] floatValue];
+        
+        offset = (100.f - relativePosition) / 100 * MIN_Y;
+//        NSLog(@"%d %f", relativePosition, offset);
+        }
+      }
+      @catch (NSException *exception) {
+        offset = 0;
+      }
+      @finally {
+      }
+      
+      
+      translationT =CGAffineTransformMakeTranslation(self.dialRadius - offset, 0);
     }
     
+     
     
-    
-    CGAffineTransform scaleT = CGAffineTransformMakeScale(scaleFactor, scaleFactor);
+//    CGAffineTransform scaleT = CGAffineTransformMakeScale(scaleFactor, scaleFactor);
     theAttributes.alpha = scaleFactor;
     
     /*
@@ -138,7 +164,8 @@
     }
      */
     
-    theAttributes.transform = CGAffineTransformConcat(scaleT, CGAffineTransformConcat(translationT, rotationT));
+//  theAttributes.transform = CGAffineTransformConcat(scaleT, CGAffineTransformConcat(translationT, rotationT));
+  theAttributes.transform = CGAffineTransformConcat(translationT, rotationT);
     theAttributes.zIndex = indexPath.item;
     
     return(theAttributes);

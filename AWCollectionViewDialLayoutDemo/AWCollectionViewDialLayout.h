@@ -11,6 +11,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class ViewController;
 @interface AWCollectionViewDialLayout : UICollectionViewLayout
 
 typedef enum WheelAlignmentType : NSInteger WheelAlignmentType;
@@ -29,7 +30,7 @@ enum WheelAlignmentType : NSInteger {
 @property (readwrite, nonatomic, assign) CGFloat AngularSpacing;
 @property (readwrite, nonatomic, assign) CGFloat dialRadius;
 @property (readonly, nonatomic, strong) NSIndexPath *currentIndexPath;
-
+@property ViewController * viewController;///for assess data model
 
 -(id)initWithRadius: (CGFloat) radius andAngularSpacing: (CGFloat) spacing andCellSize: (CGSize) cell andAlignment:(WheelAlignmentType)alignment andItemHeight:(CGFloat)height andXOffset: (CGFloat) xOffset;
 @end
