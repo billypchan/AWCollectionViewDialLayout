@@ -1,0 +1,12 @@
+[attr]utf16 diff merge -crlf
+*.m utf16
+*.h utf16
+*.swift utf16
+*.pbxproj utf16
+*.storyboard utf16
+*.plist utf16
+*.js utf16
+*.json utf16
+*.strings utf16
+*.xml utf16
+Snapfile utf16
