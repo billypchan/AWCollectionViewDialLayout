@@ -98,7 +98,7 @@
   return(theSize);
 }
 
-#define MIN_Y -100
+#define MIN_Y -150
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
   double newIndex = (indexPath.item + self.offset);

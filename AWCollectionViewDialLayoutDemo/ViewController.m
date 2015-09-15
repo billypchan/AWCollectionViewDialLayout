@@ -175,7 +175,7 @@ static NSString *cellId2 = @"cellId2";
     
     radius = 232;
     angularSpacing = 10;
-    xOffset = 216;
+    xOffset = 156;
   }
   
   [radiusLabel setText:[NSString stringWithFormat:@"Radius: %i", (int)radius]];

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6' 4&quot;" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="FAq-F0-BbQ">
-                                <rect key="frame" x="87" y="280" width="50" height="50"/>
+                                <rect key="frame" x="46" y="259" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BC0-kU-eOu"/>
                                     <constraint firstAttribute="width" constant="50" id="kfj-Wg-Rx5"/>
@@ -28,18 +28,8 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="WBK-XC-3Yy">
-                                <rect key="frame" x="139" y="280" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1Pf-rI-6A3"/>
-                                    <constraint firstAttribute="width" constant="50" id="HpX-NU-TgX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6' 11&quot;" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="ZKH-2V-RfB">
-                                <rect key="frame" x="194" y="280" width="50" height="50"/>
+                                <rect key="frame" x="196" y="259" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="COb-qz-Jhk"/>
                                     <constraint firstAttribute="height" constant="50" id="i3r-es-485"/>
@@ -85,16 +75,14 @@
                             <constraint firstAttribute="trailing" secondItem="9M6-aW-M6X" secondAttribute="trailing" id="4U8-Jv-Siz"/>
                             <constraint firstItem="zNO-Xo-JY0" firstAttribute="trailing" secondItem="9M6-aW-M6X" secondAttribute="trailing" id="6Am-od-ZCe"/>
                             <constraint firstItem="zOQ-1H-SNP" firstAttribute="top" secondItem="9M6-aW-M6X" secondAttribute="bottom" id="71U-0G-itV"/>
-                            <constraint firstItem="ZKH-2V-RfB" firstAttribute="leading" secondItem="WBK-XC-3Yy" secondAttribute="trailing" constant="5" id="8u1-52-2tj"/>
-                            <constraint firstItem="WBK-XC-3Yy" firstAttribute="leading" secondItem="FAq-F0-BbQ" secondAttribute="trailing" constant="2" id="Efa-6D-4de"/>
-                            <constraint firstItem="ZKH-2V-RfB" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="21" id="Gfe-hR-zgM"/>
+                            <constraint firstItem="ZKH-2V-RfB" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Gfe-hR-zgM"/>
                             <constraint firstItem="9M6-aW-M6X" firstAttribute="top" secondItem="zNO-Xo-JY0" secondAttribute="top" id="K5e-3l-Tyl"/>
-                            <constraint firstItem="WBK-XC-3Yy" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="21" id="duV-ta-5xA"/>
+                            <constraint firstItem="FAq-F0-BbQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="MlQ-5P-6Ee"/>
+                            <constraint firstItem="ZKH-2V-RfB" firstAttribute="leading" secondItem="FAq-F0-BbQ" secondAttribute="trailing" constant="100" id="OaP-1u-cL5"/>
                             <constraint firstItem="zNO-Xo-JY0" firstAttribute="top" secondItem="MAV-9l-7jX" secondAttribute="bottom" id="fnq-Ow-DUx"/>
-                            <constraint firstItem="FAq-F0-BbQ" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="21" id="itc-d1-bnv"/>
+                            <constraint firstItem="FAq-F0-BbQ" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="itc-d1-bnv"/>
                             <constraint firstItem="zNO-Xo-JY0" firstAttribute="leading" secondItem="9M6-aW-M6X" secondAttribute="leading" id="lDu-QB-O4a"/>
                             <constraint firstItem="9M6-aW-M6X" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="neN-8H-Ocd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZKH-2V-RfB" secondAttribute="trailing" constant="60" id="oSe-wL-jsj"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -104,7 +92,6 @@
                         <outlet property="editBtn" destination="GMJ-pP-5Mf" id="U8V-dH-Pro"/>
                         <outlet property="lblTemp0" destination="ZKH-2V-RfB" id="TCV-IL-xbS"/>
                         <outlet property="lblTemp100" destination="FAq-F0-BbQ" id="1V7-bb-H14"/>
-                        <outlet property="lblTemp50" destination="WBK-XC-3Yy" id="tAa-Os-EVq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
