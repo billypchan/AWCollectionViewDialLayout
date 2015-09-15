@@ -83,20 +83,49 @@ static NSString *cellId2 = @"cellId2";
   
   ///TODO: mean calc
   
-//  @try {
-//    self.lblTemp0.text = [self numberDegreeToString:@"0" dict:dict];
-//    self.lblTemp100.text = [self numberDegreeToString:@"100" dict:dict];
-//    
-//    int mean = ([dict[@"geoMapScale"][@"0"] intValue] + [dict[@"geoMapScale"][@"100"] intValue]) / 2;
-//    
+  ///find out min and max height
+  
+  float heightMin = -1;
+  float heightMax = -1;
+  
+  int minIdx = -1;
+  int maxIdx = -1;
+  for(int i=0;i<items.count;i++)
+  {
+  NSDictionary * dict = items[i];
+  NSString * str = dict[@"Height"];
+  NSArray* theConvertion = [str componentsSeparatedByCharactersInSet:
+                            [NSCharacterSet characterSetWithCharactersInString:@"'\""]];
+  int value1 = [theConvertion[0] intValue];
+  int value2 = [theConvertion[1] intValue];
+  
+  float number = ((value1 * 12) + value2);
+    
+    if(heightMin == -1 || heightMin > number)
+    {
+      heightMin = number;
+      minIdx = i;
+    }
+    if(heightMax == -1 || heightMax < number)
+    {
+      heightMax = number;
+      maxIdx = i;
+    }
+  }
+
+  @try {
+    self.lblTemp100.text = items[minIdx][@"Height"];
+    self.lblTemp0.text = items[maxIdx][@"Height"];
+    
+
 //    self.lblTemp50.text = [NSString stringWithFormat:@"%d°", mean];
-//  }
-//  @catch (NSException *exception) {
-//    
-//  }
-//  @finally {
-//    
-//  }
+  }
+  @catch (NSException *exception) {
+    
+  }
+  @finally {
+    
+  }
 
   
 }

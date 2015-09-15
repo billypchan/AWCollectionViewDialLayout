@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,10 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9M6-aW-M6X">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6' 4&quot;" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="FAq-F0-BbQ">
+                                <rect key="frame" x="87" y="280" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BC0-kU-eOu"/>
+                                    <constraint firstAttribute="width" constant="50" id="kfj-Wg-Rx5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="WBK-XC-3Yy">
+                                <rect key="frame" x="139" y="280" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1Pf-rI-6A3"/>
+                                    <constraint firstAttribute="width" constant="50" id="HpX-NU-TgX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6' 11&quot;" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="ZKH-2V-RfB">
+                                <rect key="frame" x="194" y="280" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="COb-qz-Jhk"/>
+                                    <constraint firstAttribute="height" constant="50" id="i3r-es-485"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9M6-aW-M6X">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2fQ-MN-t7m">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -32,9 +63,8 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="ijf-jf-A8z"/>
                                 </connections>
                             </collectionView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zNO-Xo-JY0">
+                            <navigationBar hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNO-Xo-JY0">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70588235290000001" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.70588235290000001" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
@@ -53,9 +83,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="9M6-aW-M6X" secondAttribute="trailing" id="4U8-Jv-Siz"/>
+                            <constraint firstItem="zNO-Xo-JY0" firstAttribute="trailing" secondItem="9M6-aW-M6X" secondAttribute="trailing" id="6Am-od-ZCe"/>
                             <constraint firstItem="zOQ-1H-SNP" firstAttribute="top" secondItem="9M6-aW-M6X" secondAttribute="bottom" id="71U-0G-itV"/>
-                            <constraint firstItem="9M6-aW-M6X" firstAttribute="top" secondItem="zNO-Xo-JY0" secondAttribute="bottom" id="UiV-RP-Ccu"/>
+                            <constraint firstItem="ZKH-2V-RfB" firstAttribute="leading" secondItem="WBK-XC-3Yy" secondAttribute="trailing" constant="5" id="8u1-52-2tj"/>
+                            <constraint firstItem="WBK-XC-3Yy" firstAttribute="leading" secondItem="FAq-F0-BbQ" secondAttribute="trailing" constant="2" id="Efa-6D-4de"/>
+                            <constraint firstItem="ZKH-2V-RfB" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="21" id="Gfe-hR-zgM"/>
+                            <constraint firstItem="9M6-aW-M6X" firstAttribute="top" secondItem="zNO-Xo-JY0" secondAttribute="top" id="K5e-3l-Tyl"/>
+                            <constraint firstItem="WBK-XC-3Yy" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="21" id="duV-ta-5xA"/>
+                            <constraint firstItem="zNO-Xo-JY0" firstAttribute="top" secondItem="MAV-9l-7jX" secondAttribute="bottom" id="fnq-Ow-DUx"/>
+                            <constraint firstItem="FAq-F0-BbQ" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="21" id="itc-d1-bnv"/>
+                            <constraint firstItem="zNO-Xo-JY0" firstAttribute="leading" secondItem="9M6-aW-M6X" secondAttribute="leading" id="lDu-QB-O4a"/>
                             <constraint firstItem="9M6-aW-M6X" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="neN-8H-Ocd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZKH-2V-RfB" secondAttribute="trailing" constant="60" id="oSe-wL-jsj"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -63,6 +102,9 @@
                     <connections>
                         <outlet property="collectionView" destination="9M6-aW-M6X" id="Ixx-GR-ka1"/>
                         <outlet property="editBtn" destination="GMJ-pP-5Mf" id="U8V-dH-Pro"/>
+                        <outlet property="lblTemp0" destination="ZKH-2V-RfB" id="TCV-IL-xbS"/>
+                        <outlet property="lblTemp100" destination="FAq-F0-BbQ" id="1V7-bb-H14"/>
+                        <outlet property="lblTemp50" destination="WBK-XC-3Yy" id="tAa-Os-EVq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -70,9 +112,4 @@
             <point key="canvasLocation" x="469" y="181"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
