@@ -21,5 +21,5 @@ AWCollectionViewDialLayout *dialLayout = [[AWCollectionViewDialLayout alloc] ini
 * * *
 Screenshots:
 * * *
-![Screenshot 1](http://raw.github.com/awdigital/AWCollectionViewDialLayout/master/AWCollectionViewDialLayoutDemo/awcollectionviewdiallayout_Height.jpg)
+![Screenshot 1](http://raw.github.com/awdigital/AWCollectionViewDialLayout/master/AWCollectionViewDialLayoutDemo/awcollectionviewdiallayout_Height.png)
 
