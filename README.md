@@ -1,7 +1,7 @@
 AWCollectionViewDialLayout
 ==========================
 
-UICollectionViewLayout for displaying cells in a semi-circle with a nice fish eye effect.
+UICollectionViewLayout for displaying cells in a semi-circle with a height visual display. Also suitable for distance or strength visualization for large amount of data.
 
 Very handy for quickly browsing items with your left thumb without having some of the content hidden behind your finger while you scroll.
 
@@ -21,12 +21,5 @@ AWCollectionViewDialLayout *dialLayout = [[AWCollectionViewDialLayout alloc] ini
 * * *
 Screenshots:
 * * *
-![Screenshot 1](http://raw.github.com/awdigital/AWCollectionViewDialLayout/master/AWCollectionViewDialLayoutDemo/awcollectionviewdiallayout_1.jpg)
+![Screenshot 1](http://raw.github.com/awdigital/AWCollectionViewDialLayout/master/AWCollectionViewDialLayoutDemo/awcollectionviewdiallayout_Height.jpg)
 
-![Screenshot 2](http://raw.github.com/awdigital/AWCollectionViewDialLayout/master/AWCollectionViewDialLayoutDemo/awcollectionviewdiallayout_2.jpg)
-
-
-* * *
-Video
-* * *
-[![ScreenShot](http://antoinewette.com/github/vimeo_screenshot.jpg)](https://vimeo.com/89403786)
