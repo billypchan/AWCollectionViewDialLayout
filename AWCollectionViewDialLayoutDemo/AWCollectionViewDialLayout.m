@@ -132,7 +132,6 @@
     @try {
       NSDictionary * dict = self.viewController.items[indexPath.item];
       NSString * str = dict[@"Height"];
-      float relativePosition = 0;
       NSArray* theConvertion = [str componentsSeparatedByCharactersInSet:
                                 [NSCharacterSet characterSetWithCharactersInString:@"'\""]];
       int value1 = [theConvertion[0] intValue];
@@ -141,8 +140,7 @@
       float number = ((value1 * 12) + value2);
       
         
-        offset = (100.f - relativePosition) / 100 * MIN_Y;
-        //        NSLog(@"%d %f", relativePosition, offset);
+        offset = (self.viewController.heightMax - number) / (self.viewController.heightMax - self.viewController.heightMin) * MIN_Y;
     }
     @catch (NSException *exception) {
       offset = 0;

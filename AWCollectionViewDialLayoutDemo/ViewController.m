@@ -38,7 +38,8 @@ static NSString *cellId2 = @"cellId2";
   int type;
 }
 
-@synthesize collectionView, items, editBtn;
+@synthesize collectionView, items, editBtn, heightMin, heightMax;
+
 - (void)viewDidLoad
 {
   [super viewDidLoad];
@@ -85,8 +86,8 @@ static NSString *cellId2 = @"cellId2";
   
   ///find out min and max height
   
-  float heightMin = -1;
-  float heightMax = -1;
+  heightMin = -1;
+  heightMax = -1;
   
   int minIdx = -1;
   int maxIdx = -1;
